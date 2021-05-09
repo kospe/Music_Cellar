@@ -2,14 +2,189 @@
 <html lang="en">
   <head>
 
-    <title>Music Cellar</title>
+	  <!-- Bootstrap CSS -->
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	
+	   <style>
+		
+		.column {
+		  position: relative;
+		  width: 1920px;
+		  height: 3820px;
+		  text-align: center;
+		  background: #F0F0F0;
+		}
+		.first{
+			width: 1920px;
+			height: 1000px;
+			background: #F0F0F0;
+		}
+		
+		.second{
+			position: absolute;
+			width: 1920px;
+			height: 64px;
+			left: 0px;
+			top: 99px;
+			background: #1473E6;
+		}
+		.third{
+			position: absolute;
+			width: 1920px;
+			height: 591px;
+			left: calc(50% - 1920px/2);
+			top: 163px;
+			background: #212121;
+			mix-blend-mode: multiply;
+		}
+		.split-para      {
+		  display:block;
+		  margin:10px;
+		}
+		
+		.split-para span {
+		  display:block;
+		  float:right;
+		  width:50%;
+		  margin-left:10px;
+		}
+		
+		.left{
+		  display:block;
+		  position: absolute;
+		  left: 445px;
+		}
+		
+		button {
+		  background: blue;
+		  color: white;
+		}
+		
+		div.third h1.color1{
+		  color: lightgrey;
+		}
+		
+		div.third p.color1{
+		  color: lightgrey;
+		}
+		
+		p.dotted {
+		  height: 200px;
+		  margin: auto;
+		  width: 25%;
+		  outline-style: dotted;
+		  color: lightgrey;
+		}
+		
+		div.fourth h2 {
+		  position: absolute;
+		  width: 696px;
+		  height: 48px;
+		  left: calc(50% - 696px/2 + 6px);
+		  top: 798px;
+		}
+		
+		div.fourth button {
+		  position: absolute;
+		  width: 698px;
+		  height: 30px;
+		  left: calc(50% - 696px/2 + 6px);
+		  top: 720px;
+		}
+	
+	  </style>
+	
+	  <title>Music Cellar</title>
+	
   </head>
   <body>
+    
 
-	<h3>this is start!!!</h3>
-	   
-	
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script type="text/javascript" src="cellarjavascript.js"></script>
+<div class="column">
+
+	<div class="first">
+	  <p class="split-para">accusonus <span>Login Register</span></p>
+	</div>
+  
+	<div class="second">
+	  <p class="left"><b>Free Music-Video Finder</b></p>
+	</div>
+  
+	<div class="third">
+	 <h1 class="color1">Find the right music !</h1> 
+	 <p class="color1">Analyze your videos and find just the right music track!</p>
+	 <input id="video_file" name="video_file" type="file" accept="video/mp4,video/x-m4v,video/*" style="margin-left: 200px;">
+	 
+	 <p class="dotted">or drop file here</p>
+	 <img hidden id="loader" src="https://i.imgur.com/s4Z4mdr.gif">
+	</div>
+  
+	<div class="fourth">
+		<h2>See it in action !</h2>
+	</div>
+	<div class="rectangle" style="position: absolute; left: 38%; margin-right: 600; width: 500px; height: 250px; background: #212121;">
+		<video id="videoid" width="500" heigth="300" style="margin-right: 500; width: 500px; height: 250px;">
+		</video>
+	  <p style="position: absolute;  margin-right: 600; width: 500px; height: 250px; color: lightgrey;">Video player
+	  </p>
+	  <audio id="audiomusic" controls id="sound1" preload="auto" style="position: absolute; left: 20%; bottom: -25%;">
+	  </audio>
+		<button type="button" class="btn btn-primary" style="position: absolute; width: 150px; height: 75px; left: 37%; bottom: -55%;">Download this!</button>
+	  </a>
+	</div>
+
+	  <div class="d-flex" style="position: relative; left: -8%;  bottom: -15%;">
+		  <div class="ml-auto p-2">
+			<h2>Simple, Easy-to-Use<br> Controls</h2>
+			No video editing skill needed. Just upload, <br> adjust, then receive. All free, all online.
+		  </div>		  
+		  <div class="ml-auto p-2">
+			  <h2>A Fully Online<br>Solution</h2>
+			  No program download, no software <br> installation.
+		  </div>
+		  <div class="ml-auto p-2">
+			  <h2>Safe & Secure</h2>
+			  Your files are only accessible to you, and <br> you alone.
+		  </div>
+	  </div>	
+		<div class="d-flex" style="position: relative; left: -37%;  bottom: -18%;">
+		  <div class="ml-auto">
+			<h2>Music Cellar</h2>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Mauris vulputate venenatis risus elementum pulvinar. Nulla non <br> elementum ex.
+			Nunc dignissim porttitor erat nec mattis. Morbi <br> et ex enim. Ut lacinia ante dolor, vel tristique purus tincidunt id.<br> In eu semper lorem. Suspendisse potenti.
+			Donec tincidunt et <br> magna ac rhoncus. Duis at urna ornare ipsum cursus <br> ullamcorper. Nulla ut erat ut enim tincidunt fringilla.<br>
+
+			Etiam volutpat ullamcorper lectus quis venenatis. Vivamus et <br> orci molestie, suscipit risus nec, gravida lacus. Donec lacus <br> arcu, eleifend id commodo pellentesque,
+			dapibus vitae ligula. <br> Aenean ullamcorper orci eu dui sollicitudin volutpat. Fusce <br> sollicitudin dictum tortor, ullamcorper pharetra justo suscipit <br> vel. Ut bibendum
+			blandit tortor quis pretium. Vestibulum at <br> sollicitudin diam. Sed vehicula feugiat tincidunt. Quisque <br> vulputate viverra arcu, sed molestie nunc bibendum nec.
+		  </div>
+	  </div>	
+	  <div class="d-grid gap-2" style="position: relative; right: -2%;  bottom: -19%;">
+		<button id="freetrialid" class="btn btn-primary" type="button">Sign up for free trial now!
+		</button>
+	  </div>
+	  
+	  <div class="d-flex" style="position: relative; left: -8%;  bottom: -22%;">
+		  <div class="ml-auto p-2">
+			<h2>Repair Video Audio <br> on Mac or Windows</h2>
+		  </div>		  
+		  <div class="ml-auto p-2"></div>		  
+		  <div class="ml-auto p-2">
+			  <h2>Repair Video Audio on iOS</h2>
+		  </div>
+	  </div>	
+	  
+	  
+	  
+</div>
+
+
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="cellarjavascript.js"></script>
+
+
   </body>
 </html>
