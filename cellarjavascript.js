@@ -4,7 +4,7 @@ var musiclink = ''; // global metavliti. Gemizei me to music link meta tin olokl
 
 var jquerywaitcounter = 0;
 function wait_until_jquery(){
-    //try{
+    try{
         jquerywaitcounter = jquerywaitcounter + 1;
         //console.log(jquerywaitcounter);
         if (window.jQuery) {  
@@ -20,14 +20,14 @@ function wait_until_jquery(){
                 },100);
             }
         }
-    //}catch(e){}
+    }catch(e){}
 }
 
 wait_until_jquery();
 
 function doc_ready() { // document ready
     jQuery(document).on('click','input#video_file', function(){ // upload video
-      //try{
+      try{
             jQuery(document).find("#loader").removeAttr('hidden'); // emfanisi loadder
             setTimeout(function(){
                 jQuery(document).find("#loader")[0].hidden = "true"; // apokripsi loader
@@ -35,12 +35,12 @@ function doc_ready() { // document ready
                 playVideo(); // eisagwi video
                 playMusicsound(); // anaparagwgi tou ixou
             },12000);
-      //}catch(e){}
+      }catch(e){}
     });
 }
 
 function getMusicInfo(){
-  //try{
+  try{
         var xhrObj = httpGet("https://freesound.org/apiv2/sounds/213524/?descriptors=lowlevel.mfcc,rhythm.bpm&token=C7Q51gzK43MgO1In5yd6CzR7pikEbJUSMy8t2909"); // ginetai i klisi kai epistrefei tin pliroforia tou ixou
         xhrObj = JSON.parse(xhrObj);
         //console.log(xhrObj);
@@ -54,33 +54,33 @@ function getMusicInfo(){
             }
         }
       //window.location.href = music;// Test : redirect to music link 
-  //}catch(e){}
+  }catch(e){}
 }
 
 function httpGet(theUrl){ // dimiourgei klisi get kai epistrefei link ixou
-    //try{
+    try{
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false gia synchronous request
         xmlHttp.send( null );
         //console.log(xmlHttp.responseText);
         return xmlHttp.responseText;
-    //}catch(e){}
+    }catch(e){}
 }
 
 function playMusicsound(){ // prosthetei to music link sto element
-    //try{
+    try{
         //console.log(musiclink);
         jQuery(document).find('#audiomusic').attr("src",musiclink); // eisagwgi tragoudiou . Works !!!
-    //}catch(e){}
+    }catch(e){}
 }
 
 function playVideo(){ // prosthetei to video kai kanei autoplay
-   //try{ 
+   try{ 
         jQuery(document).find('#videoid')[0].controls = true;        
         var videofile = 'mixkit-group-of-friends-partying-happily-4640.mp4'; // to arxeio video sto idio repo
         jQuery(document).find('#videoid').attr("src",videofile); // eisagwgi video
         jQuery(document).find('#videoid')[0].autoplay = true; // proairetiko 
-    //}catch(e){}
+    }catch(e){}
 }
 
 
